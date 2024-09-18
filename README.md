@@ -1,6 +1,6 @@
 # WDD 231 personal project
 
-Website Link: https://app.netlify.com/sites/magenta-monstera-17efa1/deploys/66ea252d2226f5c77f8adcc4
+Website Link: [https://app.netlify.com/sites/magenta-monstera-17efa1/deploys/66ea252d2226f5c77f8adcc4](https://magenta-monstera-17efa1.netlify.app/)
 
 ## Description
 
