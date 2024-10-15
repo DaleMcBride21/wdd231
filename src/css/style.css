@@ -84,6 +84,10 @@
   --bs-link-hover-color: #003e6b;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
+  --alert-closure: #cb2027;
+  --alert-caution: #ed7e31;
+  --alert-information: #2451a9;
+  --alert-danger: #720f04;
 }
 
 /* global styles */
@@ -306,6 +310,42 @@ a:hover {
   color: var(--bs-grey-2);
 }
 
+/* alerts styling */
+.alerts {
+  margin-left: 1.05rem;
+  margin-right: 1.05rem;
+}
+
+.alert {
+  display: flex;
+  justify-content: center;
+  margin-left: 1.05rem;
+}
+
+.alerts ul {
+  padding: 0;
+}
+
+.alert .icon {
+  height: 25px;
+  width: 60px;
+  margin: auto;
+}
+
+.alert div {
+  margin-left: 1.05rem;
+  margin-top: 1.05rem;
+}
+
+.alert div h3 {
+  margin: 0px;
+}
+
+.alert div p {
+  margin: 0px;
+}
+
+
 /* footer styling */
 
 .park-footer {
@@ -350,4 +390,17 @@ a:hover {
 
 .disclaimer {
   padding: 0 1em;
+}
+
+.alert-information {
+  color: var(--alert-information);
+}
+.alert-danger {
+  color: var(--alert-danger);
+}
+.alert-closure {
+  color: var(--alert-closure);
+}
+.alert-caution {
+  color: var(--alert-caution);
 }

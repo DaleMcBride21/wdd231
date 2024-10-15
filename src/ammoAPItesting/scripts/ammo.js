@@ -5,7 +5,7 @@ async function getData() {
     headers.set('Authorization', 'Basic ' + btoa(`${username}:${password}`));
   
     try {
-      const response = await fetch('https://app.ammoreadycloud.com/api/v2/catalog', {
+      const response = await fetch('https://restcountries.com/v3.1/all', {
         method: 'GET',
         headers: headers
       });

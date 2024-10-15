@@ -213,27 +213,41 @@ async function getJson(url) {
   };
   let data = {}
   const response = await fetch(baseUrl + url, options);
-  
+
   if (response.ok) {
     data = await response.json();
-  
+
   } else throw new Error("response not ok");
-    return data;
-  
+  return data;
+
 }
 
 export async function getParkData() {
-  const parkData = await getJson("parks?parkCode=glac");
+  const parkData = await getJson("parks?parkCode=cany");
   return parkData.data[0];
 }
 
 export function getInfoLinks(data) {
-  
   const withUpdatedImages = parkInfoLinks.map((item, index) => {
     item.image = data[index + 2].url;
     return item;
   });
   return withUpdatedImages;
+}
+
+export async function getAlertsData(code) {
+  const alertData = await getJson(`alerts?parkCode=${code}`);
+  return alertData.data;
+}
+
+export async function getVisitorCenterData(code) {
+  const alertData = await getJson(`visitorcenters?parkCode=${code}`);
+  return alertData.data;
+}
+
+export async function getActivitiesData(code) {
+  const activityData = await getJson(`activities?parkCode=${code}`);
+  return activityData.data;
 }
 
 
