@@ -39,8 +39,7 @@ export function footerTemplate(info) {
     <p>${mailing.city}, ${mailing.stateCode} ${mailing.postalCode}</p></div>
     <h4>Phone:</h4>
     <p>${voice}</p>
-  </section>
-    `;
+  </section>`;
 }
 
 export function alertTemplate(alert) {

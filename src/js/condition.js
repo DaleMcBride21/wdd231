@@ -35,8 +35,6 @@ async function init() {
   const visitorCenterData = await getVisitorCenterData("cany");
   const activityData = await getActivitiesData("cany");
 
-
-
   setHeaderFooter(parkData);
   setAlerts(alertData);
   setVisitorCenters(visitorCenterData);
