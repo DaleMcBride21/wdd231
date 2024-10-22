@@ -55,7 +55,7 @@ export function alertTemplate(alert) {
   }
   return `<li class="alert">
   <svg class="icon" focusable="false" aria-hidden="true">
-       <use href="${spritePath}#alert-${type}"></use>
+       <use href="${spritePath}#alert-${alertType}"></use>
   </svg>
   <div>
     <h3 class="alert-${alertType}">${alert.title}</h3>
