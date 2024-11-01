@@ -2,6 +2,7 @@ import { getParkData, getInfoLinks } from "./parkService.mjs";
 import setHeaderFooter from "./setHeaderFooter.mjs";
 import { mediaCardTemplate } from "./templates.mjs";
 
+
 function setParkIntro(data) {
   const introEl = document.querySelector(".intro");
   introEl.innerHTML = `<h1>${data.fullName}</h1>
@@ -30,7 +31,7 @@ function enableNavigation() {
       menuButton.setAttribute("aria-expanded", "true");
       menuButton.innerHTML = `
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="/images/sprite.symbol.svg#close"></use>
+          <use xlink:href="./images/sprite.symbol.svg#close"></use>
         </svg>
         Close
       ` // Update the button text
@@ -40,7 +41,7 @@ function enableNavigation() {
       menuButton.setAttribute("aria-expanded", "false");
       menuButton.innerHTML = `
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="/images/sprite.symbol.svg#menu"></use>
+          <use xlink:href="./images/sprite.symbol.svg#menu"></use>
         </svg>
         Open
       `; // Update the button text
