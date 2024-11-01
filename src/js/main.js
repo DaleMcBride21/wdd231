@@ -15,6 +15,43 @@ function setParkInfoLinks(data) {
   infoEl.insertAdjacentHTML("afterbegin", html.join(""));
 }
 
+function enableNavigation() {
+  const menuButton = document.querySelector("#global-nav-toggle");
+  
+  // when the main menu button is clicked:
+  menuButton.addEventListener("click", (ev) => {
+    // toggle the show class on the global-nav
+    const globalNav = document.querySelector(".global-nav");
+    globalNav.classList.toggle("show");
+
+    // check if we just opened or closed the menu
+    if (globalNav.classList.contains("show")) {
+      // if we opened it, set aria-expanded to true and change text to "Close"
+      menuButton.setAttribute("aria-expanded", "true");
+      menuButton.innerHTML = `
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="/images/sprite.symbol.svg#close"></use>
+        </svg>
+        Close
+      ` // Update the button text
+      console.log('Closed Button');
+    } else {
+      // if we closed it, set aria-expanded to false and change text back to "Open"
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.innerHTML = `
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="/images/sprite.symbol.svg#menu"></use>
+        </svg>
+        Open
+      `; // Update the button text
+      console.log('Open Button')
+    }
+
+    console.log("toggle");
+  });
+}
+
+
 async function init() {
   const parkData = await getParkData();
   const links = getInfoLinks(parkData.images);
@@ -26,3 +63,6 @@ async function init() {
 }
 
 init();
+document.addEventListener("DOMContentLoaded", () => {
+  enableNavigation();
+});
