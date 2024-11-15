@@ -19,6 +19,7 @@ function setParkInfoLinks(data) {
 function enableNavigation() {
   const menuButton = document.querySelector("#global-nav-toggle");
   
+  
   // when the main menu button is clicked:
   menuButton.addEventListener("click", (ev) => {
     // toggle the show class on the global-nav
@@ -50,7 +51,37 @@ function enableNavigation() {
 
     console.log("toggle");
   });
+
 }
+
+
+function subNavToggles() {
+  // Select all the toggle buttons and their corresponding submenus
+  const subMenuButtons = document.querySelectorAll(".global-nav__split-button__toggle");
+
+  subMenuButtons.forEach(button => {
+    button.addEventListener("click", (ev) => {
+      const subMenu = button.parentElement.nextElementSibling;
+
+      // Check if the submenu is currently visible
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+      // Update aria-expanded attribute
+      button.setAttribute("aria-expanded", !isExpanded);
+
+      // Toggle visibility of the submenu
+      if (isExpanded) {
+        subMenu.style.display = "none";
+      } else {
+        subMenu.style.display = "block";
+      }
+    });
+  });
+}
+
+
+
+
 
 
 async function init() {
@@ -66,4 +97,5 @@ async function init() {
 init();
 document.addEventListener("DOMContentLoaded", () => {
   enableNavigation();
+  subNavToggles();
 });
