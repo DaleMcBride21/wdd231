@@ -250,5 +250,9 @@ export async function getActivitiesData(code) {
   return activityData.data;
 }
 
+export async function getParkVisitorCenterDetails(id) {
+  const parkData = await getJson(`visitorcenters?id=${id}`);
+  return parkData.data[0];
+}
 
 
