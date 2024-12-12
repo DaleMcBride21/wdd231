@@ -1,0 +1,40 @@
+/* badUx.css */
+html, body { 
+    height: 100%; 
+    margin: 0; 
+} 
+
+body { display: grid; 
+    place-items: center; 
+    font-family: sans-serif; 
+    background-color: lightgrey; 
+    color: black; 
+    text-align: center; 
+}
+  
+  h1 {
+    color: black;
+    font-size: 40px;
+  }
+  
+  img {
+    width: 400px;
+    height: auto;
+  }
+  
+  form {
+    background-color: lightgrey;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
